@@ -1,8 +1,4 @@
 # Tri-cote-LC
-macro VBA permettant le tri par cote LC
-Bonjour,
-
-En cette fin d’année je vous offre un cadeau qui je l’espère révolutionnera vos listes de documents!
 Voici un macro exécutable dans n’importe quel fichier excel, permettant de trier par cote LC en quelques clics.
 Télécharger la macro « TricoteLC.bas » à cette page https://github.com/JerPri/Tri-cote-LC 
 
