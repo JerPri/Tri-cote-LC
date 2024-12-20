@@ -11,38 +11,38 @@ Sub TrierEtSeparerCotesLC()
     Dim PlageTri As Range
     Dim StartSeparationCol As Long
 
-    ' Définir la feuille active
+    ' DÃ©finir la feuille active
     Set ws = ActiveSheet
 
     ' Saisie de l'utilisateur
     Colonne = Application.InputBox("Entrer la colonne des cotes LC", Type:=2)
     If Colonne = "" Then Exit Sub
-    Ligne = Application.InputBox("Entrer la ligne de la première cote LC", Type:=1)
+    Ligne = Application.InputBox("Entrer la ligne de la premiÃ¨re cote LC", Type:=1)
     If Ligne = 0 Then Exit Sub
 
-    ' Détecter la dernière ligne utilisée dans la colonne des cotes LC
+    ' DÃ©tecter la derniÃ¨re ligne utilisÃ©e dans la colonne des cotes LC
     ValCol = ws.Range(Colonne & 1).Column
     DerniereLigne = ws.Cells(ws.Rows.Count, ValCol).End(xlUp).Row
 
-    ' Déterminer où commencent les colonnes pour la séparation
+    ' DÃ©terminer oÃ¹ commencent les colonnes pour la sÃ©paration
     StartSeparationCol = ws.Cells(Ligne, ws.Columns.Count).End(xlToLeft).Column + 1
 
-    ' Effacement sécurisé des anciennes colonnes de séparation uniquement
+    ' Effacement sÃ©curisÃ© des anciennes colonnes de sÃ©paration uniquement
     For i = StartSeparationCol To ws.Columns.Count
         If ws.Cells(Ligne, i).Value <> "" Then
             ws.Columns(i).ClearContents
         Else
-            Exit For ' Arrêter dès qu'une colonne vide est trouvée
+            Exit For ' ArrÃªter dÃ¨s qu'une colonne vide est trouvÃ©e
         End If
     Next i
 
-    ' Séparation des valeurs dans les colonnes à droite
+    ' SÃ©paration des valeurs dans les colonnes Ã  droite
     For i = Ligne To DerniereLigne
         If Not IsEmpty(ws.Cells(i, ValCol)) Then
             ws.Cells(i, ValCol).Value = Trim(ws.Cells(i, ValCol).Value)
             valeur = Split(ws.Cells(i, ValCol).Value)
             
-            ' Répartir les valeurs dans les colonnes de séparation
+            ' RÃ©partir les valeurs dans les colonnes de sÃ©paration
             If UBound(valeur) >= 0 Then ws.Cells(i, StartSeparationCol).Value = valeur(0)
             If UBound(valeur) >= 1 Then ws.Cells(i, StartSeparationCol + 1).Value = valeur(1)
             If UBound(valeur) >= 2 Then ws.Cells(i, StartSeparationCol + 2).Value = valeur(2)
@@ -57,7 +57,7 @@ Sub TrierEtSeparerCotesLC()
         End If
     Next i
 
-    ' Définir la plage pour le tri
+    ' DÃ©finir la plage pour le tri
     DerniereColonne = ws.Cells(Ligne, ws.Columns.Count).End(xlToLeft).Column
     Set PlageTri = ws.Range(ws.Cells(Ligne, 1), ws.Cells(DerniereLigne, DerniereColonne))
 
@@ -77,6 +77,6 @@ Sub TrierEtSeparerCotesLC()
         .Apply
     End With
 
-    MsgBox "Séparation et tri par cote LC effectués avec succès.", vbInformation
+    MsgBox "SÃ©paration et tri par cote LC effectuÃ©s avec succÃ¨s.", vbInformation
 End Sub
 
