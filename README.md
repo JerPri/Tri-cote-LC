@@ -5,7 +5,7 @@ Télécharger la macro « TricoteLC.bas » à cette page https://github.com/JerP
 Vous devez d’abord importer le fichier. Pour cela, ouvrez excel, puis sous l’onglet Développeur cliquez sur Visual Basic. 
  ![image](https://github.com/user-attachments/assets/2396d29a-5e4b-4e63-9c66-a7e00f5fb963)
 
-Si vous n’avez pas l’onglet Développeur, il faut l’ajouter au ruban depuis les Options (Fichier -> Options Excel) Voir la capture suivante.
+Si vous n’avez pas l’onglet Développeur, il faut l’ajouter au ruban depuis les Options (Fichier -> Options Excel)
  ![image](https://github.com/user-attachments/assets/82061501-7b9c-4217-9d50-bb14d60aa8dc)
 
 
