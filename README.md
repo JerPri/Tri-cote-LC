@@ -2,7 +2,7 @@
 Voici un macro exécutable dans n’importe quel fichier excel, permettant de trier par cote LC (Library of Congress Classification) en quelques clics.
 Télécharger la macro « TricoteLC.bas » à cette page https://github.com/JerPri/Tri-cote-LC 
 
-Vous devez d’abord importer le fichier. Pour cela, ouvrez excel, puis sous l’onglet Développeur cliquez sur Visual Basic. 
+Vous devez d’abord importer le fichier .bas. Pour cela, après l'avoir extrait du dossier compressé, ouvrez excel, puis sous l’onglet Développeur cliquez sur Visual Basic. 
  ![image](https://github.com/user-attachments/assets/2396d29a-5e4b-4e63-9c66-a7e00f5fb963)
 
 Si vous n’avez pas l’onglet Développeur, il faut l’ajouter au ruban depuis les Options (Fichier -> Options Excel)
